@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>推书</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/Tuishu.css">
+	<script type="text/javascript" src="../js/Tuishu.js" ></script>
+</head>
+<body>
+	<div id="mainpage">
+        <div  id="loginlogo">
+                <a href="javascript:login()"><img src="../img/loginlogo.png" alt="您的浏览器不支持显示" title="点击登陆"></a>
+        </div>
+        <div id="search">
+            <p>The books that know you</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="&nbsp;&nbsp;搜索" id="input1">
+            <button id="button1"><img src="../img/searchlogo.png" alt="您的浏览器不支持显示" title="点击搜索"></button>
+        </div>
+        <div id="type1">
+            <a href="javascript:type();typea1();">&nbsp;&nbsp;&nbsp;大类1&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+            <a href="javascript:type();typea2()">&nbsp;&nbsp;&nbsp;大类2&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+            <a href="javascript:type();typea3()">&nbsp;&nbsp;&nbsp;大类3&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+            <a href="javascript:type();typea4()">&nbsp;&nbsp;&nbsp;大类4&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+        </div>
+	</div>
+    <div id="loginpage">
+        <div id="closelogo">
+            <a href="javascript:close()"><img src="../img/closelogo.png" alt="您的浏览器不支持显示" title="点击关闭登陆页面"></a>
+        </div>
+        <div id="logintext">
+            <b>账&nbsp;&nbsp;&nbsp;号：&nbsp;&nbsp;&nbsp;&nbsp;</b>
+            <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;用户名" class="input2">
+            <br>
+            <b>密&nbsp;&nbsp;&nbsp;码：&nbsp;&nbsp;&nbsp;&nbsp;</b>
+            <input type="password" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;******" class="input2">
+            <br><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:loading()">&nbsp;&nbsp;&nbsp;&nbsp;登陆&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a onclick="alert('无法连接网络')">注册</a>
+        </div>
+    </div>
+    <div id="loadingpage">
+        <p>Loading</p>
+        <div id="loadinglogo">
+            <div class="loadinglogo1"></div>
+            <div class="loadinglogo1"></div>
+            <div class="loadinglogo1"></div>
+        </div>
+    </div>
+    <div id="typepage">
+        <div id="topnav">
+            <a href="javascript:close()"><img src="../img/Tuishulogo.png" alt="您的浏览器不支持显示" title="点击返回推书首页"></a>
+            <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;请搜索" id="input3">
+            <button id="button2"><img src="../img/searchlogo.png" alt="您的浏览器不支持显示" title="点击搜索"></button>
+        </div>
+        <div  id= "imageShow"></div>
+        <div>
+            		<input id = "bannerlogo0" class = "bannerlogoclass" name="banner" checked = "checked" type = "button"  onclick="changeImage(0)" />
+                    <input id = "bannerlogo1" class = "bannerlogoclass" name="banner" checked = "checked" type = "button"  onclick="changeImage(1)" />
+                    <input id = "bannerlogo2" class = "bannerlogoclass" name="banner" checked = "checked" type = "button"  onclick="changeImage(2)" />
+        </div>
+        <!--<div class="aside"></div>-->
+        <div id="bookpage">
+            <div id="type2">
+                <br>
+                <b>分类：&nbsp;&nbsp;&nbsp;</b>
+                <a id="text1">&nbsp;&nbsp;&nbsp;类1&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                <a id="text2">&nbsp;&nbsp;&nbsp;类2&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                <a id="text3">&nbsp;&nbsp;&nbsp;类3&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                <a id="text4">&nbsp;&nbsp;&nbsp;类4&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                <br><br><hr><br><br>
+            </div>
+            <div class="book">
+                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情"></a>
+            </div>
+            <div class="bookmassage">
+                <br>
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/emptystar.png" alt="您的浏览器不支持显示">
+                <br>
+                <p>书名</p>
+                <p>作者</p>
+                <hr>
+            </div>
+            <div class="book">
+                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情"></a>
+            </div>
+            <div class="bookmassage" id="bookmassage2">
+                <br>
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/emptystar.png" alt="您的浏览器不支持显示">
+                <br>
+                <p>书名</p>
+                <p>作者</p>
+                <hr>
+            </div>
+            <div id="type3">
+                <a href=""><img src="../img/leftbutton.png" alt="您的浏览器不支持显示" title="点击向左翻页"></a>
+                <a href="">&nbsp;&nbsp;1&nbsp;&nbsp;</a>&nbsp;
+                <a href="">&nbsp;&nbsp;2&nbsp;&nbsp;</a>&nbsp;
+                <a href="">&nbsp;&nbsp;3&nbsp;&nbsp;</a>&nbsp;
+                <a href="">&nbsp;&nbsp;4&nbsp;&nbsp;</a>&nbsp;
+                <a href="">&nbsp;&nbsp;...&nbsp;&nbsp;</a>&nbsp;
+                <a href="">&nbsp;&nbsp;x&nbsp;&nbsp;</a>&nbsp;
+                <a href=""><img src="../img/rightbutton.png" alt="您的浏览器不支持显示" title="点击向右翻页"></a>
+                <br><br>
+				<a>&nbsp;&nbsp;&nbsp;共 x 页&nbsp;&nbsp;&nbsp;</a>
+            </div>
+        </div>
+        <!--<div class="aside"></div>-->
+    </div>
+</body>
+</html>

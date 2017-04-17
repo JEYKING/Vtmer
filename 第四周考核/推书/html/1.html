@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var i,j,w,q;
+    var a=['一','二','三','四','五','六','七','八','九','十']
+    for(i=1;i<10;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            document.write(a[j-1]+a[i-1])
+            if(i*j<10)
+            {
+                document.write('得'+a[i*j-1]+'&nbsp;&nbsp;&nbsp;')
+            }
+            else if(i*j==10)
+            {
+                document.write('一十'+'&nbsp;&nbsp;&nbsp;')
+            }
+            else if(i*j<20)
+            {
+                document.write(a[Math.floor(i*j/10)-1]+a[Math.floor(i*j%10)-1]+'&nbsp;&nbsp;&nbsp;')
+            }
+            else if(i*j%10==0)
+            {
+                document.write(a[Math.floor(i*j/10)-1]+'十'+'&nbsp;&nbsp;&nbsp;')
+            }
+            else
+            {
+                document.write(a[Math.floor(i*j/10)-1]+'十'+a[Math.floor(i*j%10)-1])
+            }
+            document.write('&nbsp;&nbsp;&nbsp;')
+        }
+        document.write('<br>')
+    }
+</script>
+</body>
+</html>
