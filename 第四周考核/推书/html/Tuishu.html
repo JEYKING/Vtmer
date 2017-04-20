@@ -4,18 +4,24 @@
 	<title>推书</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../css/Tuishu.css">
+	<link rel="stylesheet" href="../css/animate.css">
 	<script type="text/javascript" src="../js/Tuishu.js" ></script>
 </head>
 <body>
 	<div id="mainpage">
         <div  id="loginlogo">
-                <a href="javascript:login()"><img src="../img/loginlogo.png" alt="您的浏览器不支持显示" title="点击登陆"></a>
+                <a href="javascript:login()" id="loginid"><img src="../img/loginlogo.png" alt="您的浏览器不支持显示" title="点击登陆"></a>
         </div>
         <div id="search">
             <p>The books that know you</p>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" placeholder="&nbsp;&nbsp;搜索" id="input1">
-            <button id="button1"><img src="../img/searchlogo.png" alt="您的浏览器不支持显示" title="点击搜索"></button>
+<!--            <form>-->
+            <input type="search" placeholder="搜索" id="input1" name="mainpagesubmit" onFocus="this.placeholder='' ";
+	onBlur="this.placeholder='搜索'";>
+            <input onClick="javascript:opensearchpage()"  type="submit" id="searchlogo"  value="" style="background-image:url(../img/searchlogo.png)">
+<!--            <img src="../img/searchlogo.png" alt="您的浏览器不支持显示" id="searchlogo"  tle="点击搜索">-->
+<!--            <button id="button1"><img src="../img/searchlogo.png" alt="您的浏览器不支持显示" title="点击搜索"></button>-->
+<!--            </form>-->
         </div>
         <div id="type1">
             <a href="javascript:type();typea1();">&nbsp;&nbsp;&nbsp;大类1&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
@@ -30,14 +36,16 @@
         </div>
         <div id="logintext">
             <b>账&nbsp;&nbsp;&nbsp;号：&nbsp;&nbsp;&nbsp;&nbsp;</b>
-            <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;用户名" class="input2">
+            <input type="text" placeholder="用户名" name="logintext" class="input2" onFocus="this.placeholder='' " 
+	onBlur="this.placeholder='用户名'">
             <br>
             <b>密&nbsp;&nbsp;&nbsp;码：&nbsp;&nbsp;&nbsp;&nbsp;</b>
-            <input type="password" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;******" class="input2">
+            <input type="password" placeholder="******" name="logintext" class="input2" onFocus="this.placeholder='' ";
+	onBlur="this.placeholder='******'";>
             <br><br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="javascript:loading()">&nbsp;&nbsp;&nbsp;&nbsp;登陆&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a onclick="alert('无法连接网络')">注册</a>
+            <a href="javascript:close();">&nbsp;&nbsp;&nbsp;&nbsp;登陆&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a onclick="alert('无法连接服务器')">注册</a>
         </div>
     </div>
     <div id="loadingpage">
@@ -48,11 +56,12 @@
             <div class="loadinglogo1"></div>
         </div>
     </div>
-    <div id="typepage">
+    <div id="typepage" class="animated fadeIn">
         <div id="topnav">
-            <a href="javascript:close()"><img src="../img/Tuishulogo.png" alt="您的浏览器不支持显示" title="点击返回推书首页"></a>
-            <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;请搜索" id="input3">
-            <button id="button2"><img src="../img/searchlogo.png" alt="您的浏览器不支持显示" title="点击搜索"></button>
+            <a href="javascript:backtomainpage()"><img src="../img/Tuishulogo.png" alt="您的浏览器不支持显示" title="点击返回推书首页"></a>
+            <input type="search" placeholder="请搜索" id="input3" onFocus="this.placeholder='' " 
+	onBlur="this.placeholder='请搜索'">
+            <button id="button2" onClick="javascript:opensearchpage()"><img src="../img/searchlogo.png" alt="您的浏览器不支持显示" title="点击搜索"></button>
         </div>
         <div  id= "imageShow"></div>
         <div>
@@ -65,17 +74,17 @@
             <div id="type2">
                 <br>
                 <b>分类：&nbsp;&nbsp;&nbsp;</b>
-                <a id="text1">&nbsp;&nbsp;&nbsp;类1&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
-                <a id="text2">&nbsp;&nbsp;&nbsp;类2&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
-                <a id="text3">&nbsp;&nbsp;&nbsp;类3&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
-                <a id="text4">&nbsp;&nbsp;&nbsp;类4&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                <a id="text1" href="">&nbsp;&nbsp;&nbsp;类1&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                <a id="text2" href="">&nbsp;&nbsp;&nbsp;类2&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                <a id="text3" href="">&nbsp;&nbsp;&nbsp;类3&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                <a id="text4" href="">&nbsp;&nbsp;&nbsp;类4&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
                 <br><br><hr><br><br>
             </div>
             <div class="book">
-                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
-                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
-                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
-                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情"></a>
             </div>
             <div class="bookmassage">
                 <br>
@@ -90,10 +99,10 @@
                 <hr>
             </div>
             <div class="book">
-                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
-                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
-                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
-                <a href=""><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情"></a>
             </div>
             <div class="bookmassage" id="bookmassage2">
                 <br>
@@ -121,6 +130,124 @@
             </div>
         </div>
         <!--<div class="aside"></div>-->
+    </div>
+    <div id="bookmassagepage1"  class="animated zoomIn" >
+    	<div id="bookmassagepage2">
+    		<div id="closebookmassagelogo">
+    			<a href="javascript:closebookmassage()"><img src="../img/closebookmassagelogo.png" alt="您的浏览器不支持显示" title="点击关闭"></a>
+    		</div>
+  			<div id="decoration1">	
+  			</div>
+  			<div id="bookmassagelogo">
+  			</div>
+  			<div id="bookmassagedetail">
+  				<p>书名</p><br>
+  				<img src="../img/authorlogo.png" alt="您的浏览器不支持显示">
+  				<label>&nbsp;&nbsp;|&nbsp;&nbsp;作者</label><br>
+  				<img src="../img/printlogo.png" alt="您的浏览器不支持显示">
+  				<label>&nbsp;&nbsp;|&nbsp;&nbsp;出版社</label><br><br>
+  				<img src="../img/timelogo.png" alt="您的浏览器不支持显示">
+  				<label>&nbsp;&nbsp;|&nbsp;&nbsp;出版时间</label><br>
+  				<img src="../img/librarylogo.png" alt="您的浏览器不支持显示">
+  				<label>&nbsp;&nbsp;|&nbsp;&nbsp;图书馆藏书： x本</label><br>
+  				<label id="librarymassage">x楼x架xx</label>
+  				<br><br><br>
+  				<img src="../img/knowledgelogo.png" alt="您的浏览器不支持显示">
+  				<label>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  				<a href="http://www.douban.com"><img src="../img/doubanlogo.png" alt="您的浏览器不支持显示"></a>&nbsp;&nbsp;
+  				<a href="https://www.zhihu.com"><img src="../img/zhihulogo.png" alt="您的浏览器不支持显示"></a><br><br>
+  				<img src="../img/shoppinglogo.png" alt="您的浏览器不支持显示">
+  				<label>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  				<a href="http://www.JD.com"><img src="../img/jingdonglogo.png" alt="您的浏览器不支持显示"></a>&nbsp;&nbsp;
+  				<a href="http://www.DangDang.com"><img src="../img/dangdanglogo.png" alt="您的浏览器不支持显示"></a>&nbsp;&nbsp;
+  				<a href="http://www.amazon.cn"><img src="../img/alogo.png" alt="您的浏览器不支持显示"></a><br>
+  			</div>
+  			<div id="authormassage">
+  				<h5>作者简介</h5><br>
+  				<p>
+  					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  					作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害。
+  				</p>
+  				<br><br>
+  				<h5>书籍简介</h5><br>
+  				<p>
+  					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  					作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害，作者很帅很厉害。
+  				</p>
+  				
+  			</div>
+  			<div id="decoration2">
+  			</div>
+    	</div>
+    </div>
+    <div id="searchpage" class="animated rollIn">
+        <div id="searchtopnav">
+            <a href="javascript:backtomainpage()"><img src="../img/Tuishulogo.png" alt="您的浏览器不支持显示" title="点击返回推书首页"></a>
+            <input type="search" placeholder="请搜索" id="input4" onFocus="this.placeholder='' " 
+	onBlur="this.placeholder='请搜索'">
+            <button id="button3" onClick="javascript:opensearchpage()"><img src="../img/searchlogo.png" alt="您的浏览器不支持显示" title="点击搜索"></button>
+            <button onMouseOver="javascript:displaytype();opensearchpage()" onMouseOut="javascript:nonetype()" id="type4">分&nbsp;类</button>
+            <div onMouseOver="javascript:displaytype()" onMouseOut="javascript:nonetype()" class="animated fadeInDownBig"  id="searchtype">
+            	<a href="">分&nbsp;类&nbsp;1</a><br>
+            	<a href="">分&nbsp;类&nbsp;2</a><br>
+            	<a href="">分&nbsp;类&nbsp;3</a><br>
+            	<a href="">分&nbsp;类&nbsp;4</a><br>
+            </div>
+        </div>
+        <div id="searthbanner">
+            	<div id="searchbannertext">
+            		搜索的东西
+            	</div>
+        </div>
+        <div id="bookpage2">
+            <div class="book">
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情"></a>
+            </div>
+            <div class="bookmassage">
+                <br>
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/emptystar.png" alt="您的浏览器不支持显示">
+                <br>
+                <p>书名</p>
+                <p>作者</p>
+                <hr>
+            </div>
+            <div class="book">
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情" class="bookmargin"></a>
+                <a href="javascript:bookmassage();"><img src="../img/book.png" alt="您的浏览器不支持显示" title="点击查看书籍详情"></a>
+            </div>
+            <div class="bookmassage" id="bookmassage3">
+                <br>
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/solidstar.png" alt="您的浏览器不支持显示">
+                <img src="../img/emptystar.png" alt="您的浏览器不支持显示">
+                <br>
+                <p>书名</p>
+                <p>作者</p>
+                <hr>
+            </div>
+            <div id="type4">
+                <a href=""><img src="../img/leftbutton.png" alt="您的浏览器不支持显示" title="点击向左翻页"></a>
+                <a href="">&nbsp;&nbsp;1&nbsp;&nbsp;</a>&nbsp;
+                <a href="">&nbsp;&nbsp;2&nbsp;&nbsp;</a>&nbsp;
+                <a href="">&nbsp;&nbsp;3&nbsp;&nbsp;</a>&nbsp;
+                <a href="">&nbsp;&nbsp;...&nbsp;&nbsp;</a>&nbsp;
+                <a href="">&nbsp;&nbsp;x&nbsp;&nbsp;</a>&nbsp;
+                <a href=""><img src="../img/rightbutton.png" alt="您的浏览器不支持显示" title="点击向右翻页"></a>
+                <br><br>
+				<a>&nbsp;&nbsp;&nbsp;共 x 页&nbsp;&nbsp;&nbsp;</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

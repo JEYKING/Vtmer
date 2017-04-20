@@ -6,18 +6,26 @@
 body{
 	min-width: 500px;
 }
+
+
+
+
+
 #mainpage{
 	background-image: url(../img/mainpage.png);
 	background-size: 100% 100%;
 	background-repeat:no-repeat;
     z-index: 1;
     min-width: 800px;
-    /*display: none;*/
+/*    display: none;*/
 }
 #loginlogo{
 	padding-top: 44px;
 	padding-right: 55px;
 	text-align: right;
+	width: 100%;
+	height: 83.2px;
+	box-sizing: border-box;
 }
 #search{
 	padding-top:280px;
@@ -30,7 +38,7 @@ body{
 }
 #input1{
 	margin-top: 40px;
-	padding-left: 10px;
+	padding-left: 35px;
 	font-size: 26px;
 	width: 28%;
 	height:40px;
@@ -39,12 +47,14 @@ body{
 	box-shadow: 0.5px 0.5px 5px grey;
     outline: none;
 }
-#button1{
+#searchlogo{
 	border:0;
 	background-color: white;
 	position: relative;
 	right:40px;
 	top:3px;
+	width:25px;
+	height:26px;
     outline: none;
 }
 #type1{
@@ -69,6 +79,23 @@ body{
     color:white;
     background: grey;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #loginpage{
     background-image: url(../img/loginpage.png);
     background-size: 100% 100%;
@@ -105,6 +132,7 @@ body{
     border-radius: 24px;
     box-shadow: 0.5px 0.5px 5px grey;
     outline: none;
+	padding-left: 20px;
 }
 #logintext>a:first-of-type{
     font-size: 20px;
@@ -179,6 +207,23 @@ body{
     66%     {background: white}
     100%    {background: white}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #typepage{
     margin-top: 45px;
     background: rgb(244,244,244);
@@ -197,6 +242,7 @@ body{
     left:0px;
     text-align: right;
     padding:10px 0px 0px 0px;
+	z-index: 1;
 }
 #topnav>a{
     position: relative;
@@ -211,6 +257,7 @@ body{
     box-shadow: 0.5px 0.5px 5px grey;
     outline: none;
     margin-right: 120px;
+	padding-left: 25px;
     position: relative;
     bottom: 10px;
 }
@@ -251,8 +298,8 @@ body{
     color:rgb(5,5,5);
     font-size: 14px;
 }
-#type2>a:hover{
-    color:rgb(240,50,60);
+#type2>a:checked{
+    color:rgb(234,154,67);
 }
 #type2>b{
     color:rgb(140,140,140);
@@ -292,50 +339,258 @@ body{
     font-size: 15px;
 }
 
-#loadinglogo{
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+
+
+
+
+
+
+
+
+
+
+
+
+#bookmassagepage1{
+	background-image: url(../img/bookmassagepage1.png);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+	z-index: 5;
+	position: absolute;
+	top:0;
+    width: 100%;
+    min-width: 800px;
+    margin-top:  237px;
+    margin-bottom: 180px;
+	height: 1080px;
+	display: none;
+	-webkit-animation-duration: 0.8s;
 }
-.bannerlogoclass{
-    background: white;
-    width:25px;
-    height:25px;
-    border-radius: 50%;
-	text-decoration: none;
-	font-size: 40px;
-	position: relative;
-	bottom: 20px;
-	text-shadow: 0;
+#bookmassagepage2{
+	background-image: url(../img/bookmassagepage2.png);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+	z-index: 5;
+	position: absolute;
+	top:0;
+    width: 70.53%;
+	min-width: 800px;
+	height: 890px;
+    margin:  95px 14.735% 95px 14.735%;
 }
-.bannerlogoclass:nth-of-type(1){
-    position: absolute;
-    top:202px;
-    left:43%;
-/*    animation: loading1 6s linear 0s  infinite;*/
+#closebookmassagelogo{
+	position: absolute;
+	top: 0;
+	right: 0;
 }
-.bannerlogoclass:nth-of-type(2){
-    position: absolute;
-    top:202px;
-    left:49.2%;
-/*    animation: loading1 6s linear 2s infinite;*/
+#decoration1{
+	height: 90px;
+	width: 90px;
+	box-shadow: -1.5px -1.5px 0.5px rgb(212,169,169) ;
+	position: absolute;
+	top: 100px;
+	left: 6.8%;
 }
-.bannerlogoclass:nth-of-type(3){
-    position: absolute;
-    top:202px;
-    left:55.4%;
-/*    animation: loading1 6s linear 4s infinite;*/
+#decoration2{
+	height: 90px;
+	width: 90px;
+	box-shadow: 1.5px 1.5px 0.5px rgb(212,169,169) ;
+	position: absolute;
+	bottom: 100px;
+	right: 6.8%;
 }
-.bannerlogoclass:focus{
-	background: grey;
-	outline: none;
+#bookmassagelogo{
+	background-image: url(../img/bookmassagelogo.png);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    width: 29.05%;
+	height: 370px;
+    margin-top: 154px ;
+	margin-left: 13.85%;
+	float:left;
+}
+#bookmassagedetail{
+	margin-top: 154px ;
+	padding: 46px 27.95% 0 8.19%;
+	width: 20.89%;
+	height: 324px;
+	float:left;
+	text-align: left;
 }
 
-#imageShow{
+#bookmassagedetail>img{
+	position: relative;
+	top:5px;
+	width: 17px;
+}
+#bookmassagedetail>a>img{
+	position: relative;
+	top:5px;
+	width: 29px;
+}
+#bookmassagedetail>p{
+	font-size: 30px;
+	position: relative;
+	left: 20%;
+}
+#bookmassagedetail>label{
+	font-size: 14px;
+}
+#librarymassage{
+	position: relative;
+	left:130px;
+}
+#authormassage{
+	margin-left: 13.85%;
+	padding-top: 40px;
+	width:86.15%;
+	height:200px;
+	clear: left;
+}
+#authormassages>h5{
+	font-size: 14px;
+}
+#authormassage>p{
+	font-size: 12px;
+	max-width: 85%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#searchpage{
+    margin-top: 45px;
+    background: rgb(244,244,244);
+	display: none;
+    z-index: 4;
+	min-width: 800px;
+}
+#searchtopnav{
+    background-image: url("../img/topnav.png");
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
     width: 100%;
-    height: 190px;
-    border: 1px dashed Olive;
-	background-size: 100% 100%;
+    height:50px;
+    position: fixed;
+    top: 0px;
+    right:0px;
+    left:0px;
+    text-align: center;
+    padding:10px 0px 0px 0px;
+	z-index: 1;
+}
+#searchtopnav>a:nth-child(1){
+    position: relative;
+    right:15%;
+}
+#input4{
+    font-size: 17.1px;
+    width: 20.3%;
+    height:30px;
+    border: 1px solid darkgrey;
+    border-radius: 24px;
+    box-shadow: 0.5px 0.5px 5px grey;
+    outline: none;
+    position: relative;
+    bottom: 10px;
+	padding-left: 20px;
+}
+#button3{
+    border:0px;
+    height:25px;
+    background: white;
+    position: relative;
+    right:40px;
+    top:-3.5px;
+    outline: none;
+}
+#searchtopnav>button:nth-of-type(2){
+	background: rgb(220,215,157);
+	border: 1px solid grey;
+	font-size: 15px;
+	color: rgba(4, 4, 4, 0.71);
+/*  	line-height: 1.2;*/
+	outline: none;
+	padding: 5px 2% 5px 2%;
+	text-decoration: none;
+    position: absolute;
+    right:13.4%;
+	top: 13px;
+	width: 6.8%;
+}
+#searchtype{
+	width: 6.8%;
+	background: rgb(220,215,157);
+	border-radius: 12px;
+	font-size: 15px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	position: absolute;
+    right:13.4%;
+	top: 45.1px;
+	display: none;
+}
+#searchtype>a{
+	text-decoration-color: rgba(4, 4, 4, 0.71);
+	color: rgba(4, 4, 4, 0.71);
+	line-height: 1.6;
+}
+#searthbanner{
+	background: url("../img/searchbanner.png");
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+	width: 100%;
+	height: 185px;
+}
+#searchbannertext{
+  background-color: rgb(220, 215, 157);
+  opacity: 0.741;
+  position: relative;
+  top: 95px;
+  padding: 5px 10px 5px 10px; 
+  max-width: 15%;
+  font-size: 20px;
+  color: rgba(1, 10, 32, 0.651);
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 auto;
+  
+}
+#bookpage2{
+    background-image: url(../img/bookpage.png);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    width: 71.1%;
+	padding: 90px 14.45% 0px 14.45%;
+}
+#bookmassage3{
+    position: relative;
+    left: 26%;
+}
+#bookmassage3{
+    position: relative;
+    left: 26%;
+}
+#type4{
+    text-align: center;
+    padding-bottom: 200px;
+}
+#type4>a{
+    text-decoration: none;
+    color:rgb(5,5,5);
+    font-size: 15px;
 }
 /*
 @keyframes loading1 {
